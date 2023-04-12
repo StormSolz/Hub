@@ -1,0 +1,71 @@
+-- Might Not Even Work I Made This In School Lmao
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+
+local Window = Library.CreateLib("Radiant.Tap", "Synapse")
+
+local Tab = Window:NewTab("Scripts")
+
+local Section = Tab:NewSection("Universal")
+
+Section:NewButton("Radiant V3", "Loads Radiant V3 Universal", function()
+    loadstring(game:HttpGet(“https://raw.githubusercontent.com/StormSolz/RadiantV3Free/main/Free”, true))()
+end)
+
+Section:NewButton("Radiant V2", "Loads Radiant V2 Universal", function()
+    loadstring(game:HttpGet(“https://raw.githubusercontent.com/StormSolz/RadiantFree/main/RadiantFree”, true))()
+end)
+
+Section:NewButton("Radiant V1", "Loads Radiant V1 Universal", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/StormSolz/RadiantV1/main/RadiantV1", true))()
+end)
+
+
+local Section = Tab:NewSection("Counterblox")
+
+Section:NewButton("Radiant.Tap CounterBlox", "Loads Radiant CounterBlox", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/StormSolz/cbrofull/main/execthisdumbass", true))()
+end)
+
+
+local Section = Tab:NewSection("FrontLines")
+
+Section:NewButton("Radiant Frontlines", "Loads Radiant Frontlines (pls report bugs or issues)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/StormSolz/FL/main/FrontLines.Lua", true))()
+end)
+
+local Section = Tab:NewSection("Bad Business")
+
+Section:NewButton("NOT RELEASED", "Coming Soon", function()
+    print("Not Finished")
+end)
+
+local Section = Tab:NewSection("Project Delta")
+
+Section:NewButton("Patched", "Most Features May Not Work Well Or Work At All", function()
+    print("Patched")
+end)
+
+
+local Tab = Window:NewTab("Settinge/Credits")
+
+Section:NewTextBox("Hit the 3 Dots Beside To Read Credits ", "This Script Hub Its Contents Are Made By StormSolz, SOSwolf, And Shaniqua", function(txt)
+	print(txt)
+end)
+
+Section:NewSlider("Heres A WalkSpeed Slider If You Want It Lmao", "Do I Need To Explain?", 250, 16, function(s) -- 250 (MaxValue) | 16 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+Section:NewSlider("Heres A JumpHeight Slider If You Want It Lmao", "Do I Need To Explain?", 500, 50, function(s) -- 500 (MaxValue) | 50 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.JumpHeight = s
+end)
+
+Section:NewButton("Fly", "Makes The Player Character Fly", function()
+    loadstring(game:HttpGet(https://raw.githubusercontent.com/StormSolz/fly/main/main, true))()
+end)
+
+
+Section:NewKeybind("Hit F To Toggle UI", "Hit F To Toggle UI", Enum.KeyCode.F, function()
+	Library:ToggleUI()
+end)
